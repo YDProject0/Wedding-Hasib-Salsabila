@@ -1,0 +1,37 @@
+// Function Responsive
+@mixin large {
+    @media (min-width:#{$desktop-width}){
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width}){
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (min-width: #{$small-mobile-width}) and (max-width: #{$mobile-width}){
+        @content;
+    }
+}
+
+@mixin small-mobile {
+    @media (max-width: #{$mobile-width}){
+        @content;
+    }
+}
+
+@mixin absolute-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
