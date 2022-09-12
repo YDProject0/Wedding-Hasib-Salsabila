@@ -160,4 +160,88 @@ body {
   }
 }
 
+#address {
+  position: relative;
+  height: 100vh;
+}
+#address .sep-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  justify-content: space-between;
+  height: 25vh;
+}
+#address .sep-2 .sep-2-r {
+  transform: scaleX(-1);
+}
+@media (max-width: 430px) {
+  #address .sep-2 .sep-2-r {
+    visibility: hidden;
+  }
+  #address .sep-2 img {
+    height: 15vh;
+  }
+}
+#address .content {
+  z-index: 1;
+  padding-top: 25vh;
+}
+#address .content h6 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+@media (max-width: 430px) {
+  #address .content h6 {
+    font-size: 14px;
+  }
+}
+#address .content h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+@media (max-width: 430px) {
+  #address .content h5 {
+    font-size: 16px;
+  }
+}
+#address .content h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  text-decoration: underline;
+}
+@media (max-width: 430px) {
+  #address .content h4 {
+    font-size: 20px;
+  }
+}
+#address .content h1, #address .content h2 {
+  font-family: "Great Vibes", cursive;
+}
+#address .content .hr-h {
+  height: 1.3px;
+  width: 45vh;
+  background-color: black;
+}
+#address .content .date-2 .hr {
+  width: 1.3px;
+  height: 10vh;
+  background-color: black;
+}
+#address .content .google-maps-desc {
+  color: #F7F7F7;
+}
+@media (max-width: 430px) {
+  #address .content {
+    padding-top: 15vh;
+  }
+  #address .content .hr-h {
+    width: 35vh;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
