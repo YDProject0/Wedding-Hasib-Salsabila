@@ -16,14 +16,10 @@ body {
 
 #audio-button {
     position: fixed;
+    z-index: 5;
 
     bottom: 5vh;
     right: 5vh;
-
-    @include small-mobile {
-        bottom: $sizing-standard * 4;
-        right: $sizing-standard * 4;
-    }
 
     button {
         width: 52px;
@@ -39,6 +35,16 @@ body {
             width: 85%;
             object-fit: contain;
         }
+
+        @include small-mobile {
+            width: 42px;
+            height: 42px;
+        }
+    }
+
+    @include small-mobile {
+        bottom: 3vh;
+        right: 3vh;
     }
 }
 
@@ -47,8 +53,9 @@ body {
     height: 100vh;
 
     .heading-background {
-        position: fixed;
+        @include absolute-fill;
         left: 0;
+        z-index: 0;
 
         @include small-mobile {
 
@@ -60,6 +67,7 @@ body {
 
     .content {
         z-index: 1;
+
         @include large {
             width: 50%;
         }
@@ -84,6 +92,87 @@ body {
 
             @include small-mobile {
                 font-size: 14px;
+            }
+        }
+    }
+}
+
+#bridge {
+    position: relative;
+    height: 100vh;
+
+    .container {
+
+        .sep-1 {
+            @include absolute-fill;
+
+            z-index: 0;
+            width: 100%;
+            justify-content: space-between;
+
+            .sep-1-l {
+                transform: scaleX(-1);
+            }
+
+            img {
+                height: 25vh;
+            }
+
+            @include small-mobile {
+                justify-content: flex-end;
+
+                .sep-1-l {
+                    visibility: hidden;
+                }
+
+                img {
+                    height: 15vh;
+                }
+            }
+        }
+
+        .content {
+            z-index: 1;
+
+            h1 {
+                font-family: $accent-font;
+                font-size: 64px;
+
+                @include small-mobile {
+                    font-size: 52px;
+                }
+            }
+
+            h4 {
+                font-family: $primary-font;
+            }
+
+            h6 {
+                font-family: $primary-font;
+                font-size: 18px;
+
+                @include small-mobile {
+                    font-size: 14px;
+                }
+            }
+
+            .mempelai {
+
+                h6 {
+                    // font-size: 20px;
+                    font-weight: $font-medium;
+                }
+
+                @include small-mobile {
+
+                    h6 {
+                        font-size: 16;
+                    }
+                }
+            }
+
+            @include small-mobile {
+                padding-top: 15vh;
             }
         }
     }
