@@ -1,6 +1,6 @@
 // Font
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
 @import "utilities/colors";
 @import "utilities/variables";
@@ -179,93 +179,202 @@ body {
 
 #address {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
 
-    .sep-2 {
-        @include absolute-fill;
-        z-index: 0;
-        justify-content: space-between;
+    .container {
+        padding-top: 25vh;
 
-        height: 25vh;
-
-        .sep-2-r {
-            transform: scaleX(-1);
-        }
-
-        @include small-mobile {
-
+        .sep-2 {
+            @include absolute-fill;
+            z-index: 0;
+            justify-content: space-between;
+    
+            height: 25vh;
+    
             .sep-2-r {
-                visibility: hidden;
+                transform: scaleX(-1);
             }
-
-            img {
-                height: 15vh;
+    
+            @include small-mobile {
+    
+                .sep-2-r {
+                    visibility: hidden;
+                }
+    
+                img {
+                    height: 15vh;
+                }
+            }
+        }
+    
+        .content {
+            z-index: 1;
+    
+            h6 {
+                font-family: $primary-font;
+                font-size: 18px;
+                font-weight: $font-regular;
+    
+                @include small-mobile {
+                    font-size: 14px;
+                }
+            }
+    
+            h5 {
+                font-family:  $primary-font;
+                font-weight: $font-regular;
+    
+                @include small-mobile {
+                    font-size: 16px;
+                }
+            }
+            
+            h4 {
+                font-family: $primary-font;
+                font-size: 24px;
+                font-weight: $font-regular;
+                text-decoration: underline;
+    
+                @include small-mobile {
+                    font-size: 20px;
+                }
+            }
+    
+            h1, h2 {
+                font-family: $accent-font;
+            }
+    
+            .hr-h {
+                height: 1.3px;
+                width: 45vh;
+                background-color: black;
+            }
+    
+            .date-2 {
+    
+                .hr {
+                    width: 1.3px;
+                    height: 10vh;
+                    background-color: black;
+                }
+            }
+    
+            .google-maps-desc {
+                color: $background;
+            }
+    
+            @include small-mobile {
+                padding-top: 15vh;
+    
+                .hr-h {
+                    width: 35vh;
+                }
             }
         }
     }
+}
 
-    .content {
-        z-index: 1;
-        padding-top: 25vh;
+#gift {
+    position: relative;
+    min-height: 100vh;
 
-        h6 {
+    .container {
+
+        .sep-3 {
+            @include absolute-fill;
+            z-index: 0;
+            justify-content: space-between;
+    
+            height: 40vh;
+    
+            .sep-3-l {
+                transform: scaleX(-1);
+            }
+    
+            @include small-mobile {
+    
+                .sep-3-l {
+                    visibility: hidden;
+                }
+    
+                img {
+                    height: 15vh;
+                }
+            }
+        }
+    
+        .content {
+            z-index: 1;
             font-family: $primary-font;
-            font-size: 18px;
-            font-weight: $font-regular;
 
-            @include small-mobile {
-                font-size: 14px;
+            padding-top: 10vh;
+    
+            h6 {
+                font-family: $primary-font;
+                font-size: 18px;
+                font-weight: $font-regular;
             }
-        }
-
-        h5 {
-            font-family:  $primary-font;
-            font-weight: $font-regular;
-
-            @include small-mobile {
-                font-size: 16px;
+    
+            .medium {
+                font-weight: $font-medium
             }
-        }
-        
-        h4 {
-            font-family: $primary-font;
-            font-size: 24px;
-            font-weight: $font-regular;
-            text-decoration: underline;
-
-            @include small-mobile {
-                font-size: 20px;
+    
+            h5 {
+                font-weight: $font-regular;
             }
-        }
-
-        h1, h2 {
-            font-family: $accent-font;
-        }
-
-        .hr-h {
-            height: 1.3px;
-            width: 45vh;
-            background-color: black;
-        }
-
-        .date-2 {
-
-            .hr {
-                width: 1.3px;
+    
+            .bca {
                 height: 10vh;
-                background-color: black;
+            }
+            
+            .hr {
+                width: 50vh;
+                height: 1.3px;
+                background-color: $black
+            }
+    
+            button {
+                background-color: $button_background;
+                color: $background;
+                font-weight: $font-semibold;
+                font-size: 18px;
+                padding-top: 1.3vh;
+                padding-bottom: 1.3vh;
+                padding-left: 8vh;
+                padding-right: 8vh;
+            }
+    
+            .hr-2 {
+                width: 100vh;
+                height: 1.3px;
+                background-color: $black;
+                margin-top: 5vh;
             }
         }
 
-        .google-maps-desc {
-            color: $background;
-        }
+        .sep-4 {
+            @include absolute-fill;
+            z-index: 0;
+            justify-content: space-between;
+    
+            height: 40vh;
+            margin-top: 100vh;
 
-        @include small-mobile {
-            padding-top: 15vh;
-
-            .hr-h {
-                width: 35vh;
+            transform: scaleY(-1);
+    
+            .sep-4-l {
+                transform: scaleX(-1);
+            }
+    
+            @include small-mobile {
+    
+                .sep-4-r {
+                    visibility: hidden;
+                }
+    
+                img {
+                    height: 15vh;
+                }
             }
         }
     }
