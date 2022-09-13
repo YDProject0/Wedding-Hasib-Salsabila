@@ -108,8 +108,8 @@ $('html, body').css({
 });
 
 
-$('.invitation-btn').on("click", function () {
-    document.getElementById("overlay").style.display = "none";
+$('#open-invitation').on("click", function () {
+    document.getElementById("open-invitation").style.display = "none";
     document.getElementById("au").play();
 
     $('html, body').css({
@@ -122,8 +122,6 @@ $('.invitation-btn').on("click", function () {
 })
 
 var audio = true;
-
-$('#au').trigger('play');
 
 
 $('#audio-button').on("click", function () {

@@ -64,10 +64,9 @@ body {
     }
 }
 
-#overlay {
+#heading {
     position: relative;
     height: 100vh;
-    z-index: 2;
 
     .heading-background {
         z-index: 0;
@@ -136,73 +135,6 @@ body {
             font-weight: $font-semibold;
             font-size: 18px;
             padding: $sizing-standard $sizing-standard * 5;
-        }
-    }
-}
-
-#heading {
-    position: relative;
-    height: 100vh;
-
-    .heading-background {
-        z-index: 0;
-
-        @include large {
-            @include absolute-fill;
-        }
-
-        @include desktop {
-            @include absolute-fill;
-        }
-
-        @include tablet {
-            @include absolute-fill;
-        }
-
-        img:nth-child(2) {
-            @include small-mobile {
-                display: none;
-            }
-        }
-
-        .decor {
-            height: 100%;
-
-            @include small-mobile {
-                position: absolute;
-                left: -70%;
-            }
-        }
-    }
-
-    .content {
-        z-index: 1;
-
-        @include large {
-            width: 50%;
-        }
-
-        @include small-mobile {
-            width: 100%;
-        }
-
-        h1 {
-            font-family: $accent-font;
-            font-size: 64px;
-
-            @include small-mobile {
-                font-size: 52px;
-            }
-        }
-
-        h6 {
-            font-family: $primary-font;
-            font-size: 18px;
-            font-weight: $font-medium;
-
-            @include small-mobile {
-                font-size: 14px;
-            }
         }
     }
 }
