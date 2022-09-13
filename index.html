@@ -14,6 +14,11 @@
 </head>
 
 <body>
+    <audio id="au" preload="none">
+        <source src="audio/backsound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <div id="audio-button">
         <button class="">
             <img src="./images/sound_on.png" class="audio-img">
@@ -125,7 +130,7 @@
                 <h5 class="medium mt-5">Hadiah dan Kiriman</h5>
                 <h5 class="mt-4">Transfer</h5>
                 <img class="bca mt-5 mb-5" src="./images/bca.jpg">
-                <h5 class="medium">1234567890987654321</h5>
+                <h5 id="no-rek-text" class="medium">1234567890987654321</h5>
                 <div class="hr mx-auto"></div>
                 <h5 class="medium mt-2">Garin Hasta</h5>
                 <button class="copy-rek justify-content-center mt-4">Salin No. Rekening</button>
@@ -135,7 +140,7 @@
                 <h5 class="mt-5">Alamat Hadiah</h5>
                 <h5 class="medium mt-4">Garin Hasta</h5>
                 <div class="hr mx-auto"></div>
-                <h5 class="mt-2">PONPES AL-HIDAYAH, Donowarih, Karangploso - Malang</h5>
+                <h5 id="address-text" class="mt-2">PONPES AL-HIDAYAH, Donowarih, Karangploso - Malang</h5>
                 <div class="hr mx-auto"></div>
                 <h5 class="mt-2">085123456789</h5>
                 <button class="copy-address justify-content-center mt-4">Salin Alamat</button>
@@ -161,19 +166,19 @@
                     </form>
                 </div>
                 <div class="col-12 col-md-6 col-lg-5">
-                    <div class="comment-scetion">
+                    <div class="comment-section">
                         <h3 class="mb-2">Ucapan</h3>
                         <div class="hr w-100 mb-4"></div>
                         <div class="comment-list"></div>
 
                         <!-- Comment template -->
-                        <div class="comment">
+                        <!-- <div class="comment">
                             <div class="d-flex align-items-baseline mb-2">
                                 <h4 class="name d-block my-0 me-3">Garin</h4>
                                 <p class="timestamp d-block my-0 ">2 Hari lalu</p>
                             </div>
                             <p class="content-text">●&nbsp;&nbsp;&nbsp;&nbsp;Semoga langgeng sampai tua</p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -200,6 +205,13 @@
             </div>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    <script src="js/jquery-dateformat.js"></script>
+
+    <script src="js/index.js" type="module"></script>
 
 </body>
 

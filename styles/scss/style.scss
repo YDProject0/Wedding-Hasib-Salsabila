@@ -388,7 +388,7 @@ body {
 
         .sep-4 {
             @include absolute-fill;
-            z-index: 0;
+            z-index: -1;
             justify-content: space-between;
 
             height: 40vh;
@@ -446,10 +446,19 @@ body {
         background-color: $black
     }
 
-    .comment {
-        h4 {
-            font-family: $accent-font;
-            font-size: 24px;
+    .comment-list {
+        overflow-y: auto;
+        height: 300px;
+
+        @include small-mobile {
+            height: 400px;
+        }
+
+        .comment {
+            h4 {
+                font-family: $accent-font;
+                font-size: 24px;
+            }
         }
     }
 }
@@ -518,4 +527,38 @@ body {
             }
         }
     }
+}
+
+
+html::-webkit-scrollbar,
+.comment-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    background: $background;
+    border-radius: 10px;
+}
+
+.comment-list::-webkit-scrollbar-track {
+    background: $background;
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb,
+.comment-list::-webkit-scrollbar-thumb {
+    background: rgb(209, 209, 209);
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+.comment-list::-webkit-scrollbar-thumb:hover {
+    background: rgb(100, 100, 100);
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:active,
+.comment-list::-webkit-scrollbar-thumb:active {
+    background: rgb(68, 68, 68);
+    border-radius: 10px;
 }
