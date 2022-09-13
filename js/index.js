@@ -103,23 +103,23 @@ $('.copy-address').on("click", function () {
 })
 
 // disable scrolling
-// $('html, body').css({
-//     overflow: 'hidden',
-// });
+$('html, body').css({
+    overflow: 'hidden',
+});
 
 
-// $('.invitation-btn').on("click", function () {
-//     document.getElementById("overlay").style.display = "none";
-//     document.getElementById("au").play();
+$('.invitation-btn').on("click", function () {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("au").play();
 
-//     $('html, body').css({
-//         overflow: 'auto',
-//     });
+    $('html, body').css({
+        overflow: 'auto',
+    });
 
-//     $('#au').trigger('play');
+    $('#au').trigger('play');
 
-//     window.scrollTo(0, 0);
-// })
+    window.scrollTo(0, 0);
+})
 
 var audio = true;
 
