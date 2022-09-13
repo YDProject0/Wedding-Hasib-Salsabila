@@ -99,6 +99,12 @@ body {
         }
     }
 
+    #overlay {
+        z-index: 1;
+        left: 0;
+        background-color: rgba(black, .3);
+    }
+
     .content {
         z-index: 1;
 

@@ -107,9 +107,13 @@ $('html, body').css({
     overflow: 'hidden',
 });
 
+document.getElementById("audio-button").style.display = "none";
+document.getElementById("overlay").style.display = "block"
 
 $('#open-invitation').on("click", function () {
     document.getElementById("open-invitation").style.display = "none";
+    document.getElementById("overlay").style.display = "none"
+    document.getElementById("audio-button").style.display = "block";
     document.getElementById("au").play();
 
     $('html, body').css({
