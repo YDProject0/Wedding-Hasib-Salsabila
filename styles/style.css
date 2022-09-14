@@ -111,39 +111,39 @@ body {
   left: 0;
   background-color: rgba(0, 0, 0, 0.3);
 }
-#heading .content {
+#heading .heading-content {
   z-index: 1;
 }
 @media (min-width: 1200px) {
-  #heading .content {
+  #heading .heading-content {
     width: 50%;
   }
 }
 @media (max-width: 430px) {
-  #heading .content {
+  #heading .heading-content {
     width: 100%;
   }
 }
-#heading .content h1 {
+#heading .heading-content h1 {
   font-family: "Great Vibes", cursive;
   font-size: 64px;
 }
 @media (max-width: 430px) {
-  #heading .content h1 {
+  #heading .heading-content h1 {
     font-size: 52px;
   }
 }
-#heading .content h6 {
+#heading .heading-content h6 {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 500;
 }
 @media (max-width: 430px) {
-  #heading .content h6 {
+  #heading .heading-content h6 {
     font-size: 14px;
   }
 }
-#heading .content button {
+#heading .heading-content button {
   background-color: #1F413A;
   color: #F7F7F7;
   font-weight: 600;
@@ -500,6 +500,17 @@ body {
   #footer .content h6 {
     font-size: 14px;
   }
+}
+
+.content {
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+
+.content.visible {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 html::-webkit-scrollbar,
