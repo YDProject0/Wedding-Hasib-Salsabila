@@ -543,16 +543,16 @@ body {
     }
 }
 
-.content {
-    opacity: 0;
-    transform: translate(0, 10vh);
-    transition: all 1s;
-}
+// .content {
+//     opacity: 0;
+//     transform: translate(0, 10vh);
+//     transition: all 1s;
+// }
 
-.content.visible {
-    opacity: 1;
-    transform: translate(0, 0);
-}
+// .content.visible {
+//     opacity: 1;
+//     transform: translate(0, 0);
+// }
 
 
 html::-webkit-scrollbar,
