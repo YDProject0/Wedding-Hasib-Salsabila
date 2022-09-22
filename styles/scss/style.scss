@@ -335,7 +335,8 @@ body {
             z-index: 0;
             justify-content: space-between;
 
-            height: 40vh;
+            margin-top: 15vh;
+            height: 15vh;
 
             .sep-3-l {
                 transform: scaleX(-1);
@@ -441,7 +442,7 @@ body {
         }
 
         button {
-            background-color: $main;
+            background-color: $button_background;
             border: none;
             color: white;
             font-size: 16px;
