@@ -181,6 +181,7 @@ body {
 
         .content {
             z-index: 1;
+            padding-top: $sizing-standard * 12;
 
             h1 {
                 font-family: $accent-font;
@@ -257,6 +258,15 @@ body {
 
         .content {
             z-index: 1;
+            padding-top: $sizing-standard * 12;
+
+            .title-heading {
+                width: 75%;
+
+                @include small-mobile {
+                    width: 100%;
+                }
+            }
 
             h6 {
                 font-family: $primary-font;
@@ -334,8 +344,7 @@ body {
             @include absolute-fill;
             z-index: 0;
             justify-content: space-between;
-
-            margin-top: 15vh;
+            top: 2%;
             height: 15vh;
 
             .sep-3-l {
@@ -345,6 +354,11 @@ body {
             @include small-mobile {
 
                 .sep-3-l {
+                    width: 200px;
+                    object-fit: contain;
+                }
+
+                .sep-3-r {
                     visibility: hidden;
                 }
 
@@ -357,11 +371,17 @@ body {
         .content {
             z-index: 1;
             font-family: $primary-font;
+            padding-top: $sizing-standard * 12;
 
             h6 {
                 font-family: $primary-font;
                 font-size: 18px;
                 font-weight: $font-regular;
+                width: 75%;
+
+                @include small-mobile {
+                    width: 100%;
+                }
             }
 
             .medium {
@@ -543,17 +563,6 @@ body {
         }
     }
 }
-
-// .content {
-//     opacity: 0;
-//     transform: translate(0, 10vh);
-//     transition: all 1s;
-// }
-
-// .content.visible {
-//     opacity: 1;
-//     transform: translate(0, 0);
-// }
 
 
 html::-webkit-scrollbar,
