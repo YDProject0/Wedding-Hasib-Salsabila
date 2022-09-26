@@ -358,7 +358,6 @@ body {
 
 #gift {
   position: relative;
-  min-height: 100vh;
   padding: 80px 0;
 }
 #gift .container .sep-3 {
@@ -421,7 +420,7 @@ body {
   height: 1px;
   background-color: #000000;
 }
-#gift .container .content button {
+#gift .container .content .copy-button .copy-wa {
   background-color: #999A9C;
   color: #F5F5F7;
   font-weight: 600;
@@ -430,6 +429,26 @@ body {
   padding-bottom: 1.3vh;
   padding-left: 8vh;
   padding-right: 8vh;
+  margin-right: 1vh;
+  text-decoration: none;
+}
+#gift .container .content .copy-button .copy-address {
+  background-color: #999A9C;
+  color: #F5F5F7;
+  font-weight: 600;
+  font-size: 18px;
+  padding-top: 1.3vh;
+  padding-bottom: 1.3vh;
+  padding-left: 8vh;
+  padding-right: 8vh;
+}
+@media (max-width: 430px) {
+  #gift .container .content .copy-button {
+    flex-direction: column;
+  }
+  #gift .container .content .copy-button .copy-wa {
+    margin: 0;
+  }
 }
 #gift .container .content .hr-2 {
   width: 100%;

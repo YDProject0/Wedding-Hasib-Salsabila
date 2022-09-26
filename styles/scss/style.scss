@@ -383,7 +383,6 @@ body {
 
 #gift {
     position: relative;
-    min-height: 100vh;
     padding: $sizing-standard * 10 0;
 
     .container {
@@ -455,15 +454,39 @@ body {
                 background-color: $black
             }
 
-            button {
-                background-color: $button_background;
-                color: $background;
-                font-weight: $font-semibold;
-                font-size: 18px;
-                padding-top: 1.3vh;
-                padding-bottom: 1.3vh;
-                padding-left: 8vh;
-                padding-right: 8vh;
+            .copy-button {
+
+                .copy-wa {
+                    background-color: $button_background;
+                    color: $background;
+                    font-weight: $font-semibold;
+                    font-size: 18px;
+                    padding-top: 1.3vh;
+                    padding-bottom: 1.3vh;
+                    padding-left: 8vh;
+                    padding-right: 8vh;
+                    margin-right: 1vh;
+                    text-decoration: none;
+                }
+                
+                .copy-address {
+                    background-color: $button_background;
+                    color: $background;
+                    font-weight: $font-semibold;
+                    font-size: 18px;
+                    padding-top: 1.3vh;
+                    padding-bottom: 1.3vh;
+                    padding-left: 8vh;
+                    padding-right: 8vh;
+                }
+
+                @include small-mobile {
+                    flex-direction: column;
+
+                    .copy-wa {
+                        margin: 0;
+                    }
+                }
             }
 
             .hr-2 {
