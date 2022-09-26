@@ -11,6 +11,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100%;
+    max-width: 100%;
     background-color: $background;
 }
 
@@ -90,7 +91,7 @@ body {
         }
 
         .decor {
-            height: 100%;
+            height: 50%;
 
             @include small-mobile {
                 position: absolute;
@@ -143,6 +144,13 @@ body {
             padding: $sizing-standard $sizing-standard * 5;
         }
     }
+
+    #reciver {
+
+        #nama {
+            font-weight: $font-semibold;
+        }
+    }
 }
 
 #bridge {
@@ -158,12 +166,15 @@ body {
             width: 100%;
             justify-content: space-between;
 
-            .sep-1-l {
+            .sep-1-r {
                 transform: scaleX(-1);
+                rotate: 25deg;
             }
 
             img {
-                height: 25vh;
+                margin-top: 5vh;
+                height: 30vh;
+                rotate: -25deg;
             }
 
             @include small-mobile {
@@ -269,10 +280,16 @@ body {
             z-index: 0;
             justify-content: space-between;
 
-            height: 25vh;
+            height: 20vh;
+            margin-top: 10vh;
+
+            .sep-2-l {
+                transform: scaleX(-1);
+                rotate: -15deg;
+            }
 
             .sep-2-r {
-                transform: scaleX(-1);
+                rotate: 15deg;
             }
 
             @include small-mobile {
@@ -376,10 +393,15 @@ body {
             z-index: 0;
             justify-content: space-between;
             top: 2%;
-            height: 15vh;
+            height: 25vh;
 
             .sep-3-l {
                 transform: scaleX(-1);
+                rotate: -15deg;
+            }
+
+            .sep-3-r {
+                rotate: 15deg;
             }
 
             @include small-mobile {
@@ -553,8 +575,13 @@ body {
             display: none !important;
         }
 
-        .sep-1-l {
+        .sep-1-r {
             transform: scaleX(-1);
+            rotate: 15deg;
+        }
+
+        .sep-1-l {
+            rotate: -15deg;
         }
 
         img {
@@ -592,6 +619,10 @@ body {
                 font-size: 14px;
             }
         }
+    }
+
+    img {
+        height: 15vh;
     }
 }
 
