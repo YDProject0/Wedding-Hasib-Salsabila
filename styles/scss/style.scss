@@ -66,7 +66,7 @@ body {
 
 #heading {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
 
     .heading-background {
         z-index: 0;
@@ -147,7 +147,7 @@ body {
 
 #bridge {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
 
     .container {
 
@@ -206,6 +206,37 @@ body {
             }
 
             .mempelai {
+                margin-top: $sizing-standard * 6;
+
+                .image-wrapper {
+                    position: relative;
+                    width: 300px;
+                    height: 450px;
+                    margin-bottom: $sizing-standard * 6;
+
+                    img {
+                        position: relative;
+                        width: 300px;
+                        height: 450px;
+                        object-fit: cover;
+                        z-index: 2;
+                    }
+
+                    .decor {
+                        position: absolute;
+                        left: -($sizing-standard + ($sizing-standard / 2));
+                        bottom: -($sizing-standard + ($sizing-standard / 2));
+                        width: 300px;
+                        height: 450px;
+                        border: 6px solid $main;
+                        z-index: 1;
+                    }
+                }
+
+                h4 {
+                    font-family: $accent-font;
+                    font-size: 72px;
+                }
 
                 h6 {
                     font-weight: $font-medium;
