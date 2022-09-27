@@ -635,20 +635,25 @@ body {
         z-index: 1;
 
         @include large {
-            width: 50%;
+            width: 75%;
         }
 
         @include small-mobile {
             width: 100%;
         }
 
-        h1 {
+        h1,h2 {
             font-family: $accent-font;
-            font-size: 64px;
+            
+            font-size: 48px;
 
             @include small-mobile {
                 font-size: 52px;
             }
+        }
+
+        h2 {
+            font-family: $primary-font;
         }
 
         h6 {
