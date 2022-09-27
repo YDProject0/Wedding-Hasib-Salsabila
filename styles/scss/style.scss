@@ -10,7 +10,6 @@ html,
 body {
     margin: 0;
     padding: 0;
-    min-height: 100%;
     max-width: 100%;
     background-color: $background;
 }
@@ -67,7 +66,8 @@ body {
 
 #heading {
     position: relative;
-    min-height: 100vh;
+    // min-height: 100vh;
+    // height: 100%;
 
     .heading-background {
         z-index: 0;
@@ -101,13 +101,14 @@ body {
     }
 
     #overlay {
+        @include absolute-fill;
         z-index: 1;
-        left: 0;
         background-color: rgba(black, .3);
     }
 
     .heading-content {
-        z-index: 1;
+        position: relative;
+        z-index: 2;
 
         @include large {
             width: 50%;
@@ -130,10 +131,23 @@ body {
             font-family: $primary-font;
             font-size: 18px;
             font-weight: $font-medium;
+            margin-bottom: $sizing-standard * 3;
 
             @include small-mobile {
                 font-size: 14px;
             }
+        }
+
+        img:nth-child(2){
+            @include small-mobile {
+                display: none;
+            }            
+        }
+
+        
+
+        #reciver #nama {
+            font-weight: $font-semibold;
         }
 
         button {
@@ -141,15 +155,9 @@ body {
             color: $background;
             font-weight: $font-semibold;
             font-size: 18px;
-            padding: $sizing-standard $sizing-standard * 5;
+            // padding: $sizing-standard $sizing-standard * 5;
         }
-    }
-
-    #reciver {
-
-        #nama {
-            font-weight: $font-semibold;
-        }
+        
     }
 }
 
@@ -172,7 +180,6 @@ body {
             }
 
             img {
-                margin-top: 5vh;
                 height: 30vh;
                 rotate: -25deg;
             }
@@ -192,7 +199,7 @@ body {
 
         .content {
             z-index: 1;
-            padding-top: $sizing-standard * 12;
+            padding-top: $sizing-standard * 18;
 
             h1 {
                 font-family: $accent-font;
@@ -281,11 +288,16 @@ body {
             justify-content: space-between;
 
             height: 20vh;
-            margin-top: 10vh;
+            margin-top: 2vh;
 
             .sep-2-l {
                 transform: scaleX(-1);
                 rotate: -15deg;
+
+                @include small-mobile {
+                    width: 45vw;
+                    object-fit: contain;
+                }
             }
 
             .sep-2-r {
@@ -338,7 +350,7 @@ body {
             h4 {
                 font-family: $primary-font;
                 font-size: 24px;
-                font-weight: $font-regular;
+                font-weight: $font-semibold;
                 text-decoration: underline;
 
                 @include small-mobile {
@@ -364,6 +376,12 @@ body {
                     height: 5vh;
                     background-color: black;
                 }
+            }
+
+            .hr {
+                width: 100%;
+                height: 1px;
+                background-color: $black
             }
 
             .google-maps-desc {
@@ -437,7 +455,7 @@ body {
             }
 
             .medium {
-                font-weight: $font-medium
+                font-weight: $font-semibold;
             }
 
             h5 {

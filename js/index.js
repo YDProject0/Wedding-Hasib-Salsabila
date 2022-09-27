@@ -18,6 +18,7 @@ const app = initializeApp(firebaseConfig);
 
 const db = getDatabase();
 const commentRef = ref(db, 'comments');
+// $('#heading').height('100%')
 
 // Get comment
 onValue(commentRef, (snapshot) => {
@@ -95,7 +96,12 @@ $('.copy-address').on("click", function () {
 // disable scrolling
 $('html, body').css({
     overflow: 'hidden',
+    height: '100%'
 });
+
+$('#heading').css({
+    height:'100%'
+})
 
 document.getElementById("audio-button").style.display = "none";
 document.getElementById("overlay").style.display = "block"
@@ -113,7 +119,15 @@ $('#open-invitation').on("click", function () {
 
     $('html, body').css({
         overflow: 'auto',
+        overflowX: 'hidden',
+        height: 'unset',
+        minHeight: '100% !important'
     });
+
+    $('#heading').css({
+        minHeight:'100vh',
+        height:'unset'
+    })
 
     $('#au').trigger('play');
 
@@ -145,7 +159,6 @@ function controlAudioSound() {
         $('#au').prop("currentTime", 0);
     }
 }
-
 // $(document).on("scroll", function() {
 //     var pageTop = $(document).scrollTop();
 //     var pageBottom = pageTop + $(window).height();
