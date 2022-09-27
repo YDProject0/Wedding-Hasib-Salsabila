@@ -112,6 +112,7 @@ document.body.scrollTop = 0;
 
 $('#open-invitation').on("click", function () {
     document.getElementById("open-invitation").style.display = "none";
+    document.getElementById("open-invitation-btn").style.display = "none";
     document.getElementById("overlay").style.display = "none"
     document.getElementById("reciver").style.display = "none"
     document.getElementById("audio-button").style.display = "block";
