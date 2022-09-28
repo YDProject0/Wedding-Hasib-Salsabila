@@ -19,8 +19,29 @@
 
 <body>
     <audio id="au" preload="none">
-        <source src="audio/backsound.mp3" type="audio/mpeg">
+        <!-- <source src="audio/backsound-noah.mp3" type="audio/mpeg"> -->
         Your browser does not support the audio element.
+        <source type="audio/mpeg">
+        <script>
+            var sour;
+
+            if ( params.has('for') ) {
+                sour = 'audio/backsound-noah.mp3'
+            } else {
+                sour = 'audio/backsound.mp3'
+            }
+
+            document.getElementById('au').setAttribute('src', sour)
+            document.getElementById('au').load()
+            document.getElementById('au').play()
+        </script>
+        <!-- <script>
+            if( params.has('for') ) {
+                document.getElementById('au').setAttribute('src', 'audio/backsound-noah.mp3')
+            } else {
+                document.getElementById('au').setAttribute('src', 'audio/backsound.mp3')
+            }
+        </script> -->
     </audio>
 
     <div id="audio-button">
@@ -36,7 +57,7 @@
         <div id="overlay"></div>
         <div class="container m-auto">
             <div class="heading-content m-auto text-center">
-                <h6 data-aos="fade-down">THE WEDDING OF</h6>
+                <h6 data-aos="fade-down">A LONG JOURNEY OF</h6>
                 <div>
                     <h1 data-aos="fade-down" data-aos-delay="100">Hasib</h1>
                     <h1 data-aos="fade-down" data-aos-delay="200">&</h1>
@@ -167,8 +188,8 @@
                 <h6 class="mx-auto" data-aos="fade-down">Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila
                     Bapak/Ibu/Saudara/i berkenan hadir, untuk memberikan doa restu kepada putra-putri kami.</h6>
 
-                <h5 class="medium mt-5" data-aos="fade-down" data-aos-delay="100">Hadiah dan Karangan Bunga</h5>
-                <h5 class="mt-5" data-aos="fade-down" data-aos-delay="500">Alamat Hadiah</h5>
+                <h5 class="medium mt-5" data-aos="fade-down" data-aos-delay="100">Ucapan Karangan Bunga</h5>
+                <h5 class="mt-5" data-aos="fade-down" data-aos-delay="500">Alamat</h5>
                 <div class="hr mx-auto" data-aos="fade-down" data-aos-delay="600"></div>
                 <h5 id="address-text" class="mt-2" data-aos="fade-down" data-aos-delay="600">PONPES Al-Hidayah, Donowarih, Karangploso, Malang</h5>
                 <div class="hr mx-auto" data-aos="fade-down" data-aos-delay="700"></div>
@@ -231,9 +252,9 @@
     </div>
 
     <div id="footer">
-        <div class="mb-4">
+        <!-- <div class="mb-4">
             <img class="mobile-only" src="./images/horizontal-decor.png">
-        </div>
+        </div> -->
         <div class="sep-1 d-flex flex-row opacity-75">
             <img class="sep-1-l" src="./images/am basics Artificial Real Touch Rose Stem in Bulk - Artificialmerch.png" data-aos="zoom-in">
             <img class="sep-1-r" src="./images/am basics Artificial Real Touch Rose Stem in Bulk - Artificialmerch.png" data-aos="zoom-in">
@@ -267,8 +288,8 @@
 
                 // }
                 if( params.has('for')) {
-                    recipient = 'H. Ali Ahmad Sekeluarga,';
-                    recipientInfo = 'Anggota DPR RI Komisi VI FPKB';
+                    recipient = 'H. Ali Ahmad, SH & Keluarga';
+                    recipientInfo = 'Anggota Komisi VI DPR RI';
                     document.getElementById("and").style.display = 'none';
                 }else {
                     recipient = 'Hasib';
