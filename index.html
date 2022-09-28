@@ -21,28 +21,22 @@
     <audio id="au" preload="none">
         <!-- <source src="audio/backsound-noah.mp3" type="audio/mpeg"> -->
         Your browser does not support the audio element.
-        <source type="audio/mpeg">
-        <script>
-            var sour;
-
-            if ( params.has('for') ) {
-                sour = 'audio/backsound-noah.mp3'
-            } else {
-                sour = 'audio/backsound.mp3'
-            }
-
-            document.getElementById('au').setAttribute('src', sour)
-            document.getElementById('au').load()
-            document.getElementById('au').play()
-        </script>
-        <!-- <script>
-            if( params.has('for') ) {
-                document.getElementById('au').setAttribute('src', 'audio/backsound-noah.mp3')
-            } else {
-                document.getElementById('au').setAttribute('src', 'audio/backsound.mp3')
-            }
-        </script> -->
+        <source id="sour" src="audio/backsound-noah.mp3" type="audio/mpeg">
     </audio>
+    <script>
+        var sour
+        var urlParams = new URLSearchParams(window.location.search)
+
+        if( urlParams.has('for') ) {
+            sour = 'audio/backsound.mp3'
+        } else {
+            sour = 'audio/backsound-noah.mp3'
+        }
+        
+        document.getElementById('au').setAttribute('src', sour)
+        document.getElementById('au').load()
+        document.getElementById('au').play()
+    </script>
 
     <div id="audio-button">
         <button class="">
@@ -289,7 +283,7 @@
                 // }
                 if( params.has('for')) {
                     recipient = 'H. Ali Ahmad, SH & Keluarga';
-                    recipientInfo = 'Anggota Komisi VI DPR RI';
+                    recipientInfo = 'Komisi VI DPR RI';
                     document.getElementById("and").style.display = 'none';
                 }else {
                     recipient = 'Hasib';

@@ -701,17 +701,13 @@ body {
         }
 
         h1,h2 {
-            font-family: $accent-font;
+            font-family: $primary-font;
             
             font-size: 48px;
 
             @include small-mobile {
-                font-size: 32px;
+                font-size: 28px;
             }
-        }
-
-        h2 {
-            font-family: $primary-font;
         }
 
         .hr {
