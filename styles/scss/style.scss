@@ -634,6 +634,57 @@ body {
     }
 }
 
+#protocol {
+    position: relative;
+
+    .container {
+        
+        .title {
+            font-family: $primary-font;
+            font-weight: $font-semibold;
+            text-decoration: underline;
+        }
+        
+        .h5 {
+            font-family: $primary-font;
+            font-weight: $font-regular;
+        }
+
+        .content {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+            .icons {
+
+                width: 17vh;
+                height: 17vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                img {
+                    height: 8vh;
+                    width: 8vh;
+                }
+            }
+
+            @include small-mobile {
+                flex-direction: column;
+            }
+        }
+
+        @include small-mobile {
+            
+            padding: 5vh 0;
+        }
+    }
+}
+
 #footer {
     position: relative;
     padding: $sizing-standard * 12 0;
@@ -676,10 +727,6 @@ body {
 
             @include small-mobile {
                 height: 13vh;
-            }
-
-            @include small-tablet {
-                height: 10vh;
             }
         }
 
